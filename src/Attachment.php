@@ -174,9 +174,12 @@ class Attachment
 
         $count = count($attachments);
         $title = sprintf(
-            _n('%d attachment — not analysed by ChatX3 (the API does not handle files yet)',
-               '%d attachments — not analysed by ChatX3 (the API does not handle files yet)',
-               $count, 'chatx3'),
+            _n(
+                '%d attachment — not analysed by ChatX3 (the API does not handle files yet)',
+                '%d attachments — not analysed by ChatX3 (the API does not handle files yet)',
+                $count,
+                'chatx3'
+            ),
             $count
         );
 

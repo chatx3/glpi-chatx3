@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<ruleset name="chatx3">
+    <description>
+        Standard de code du plugin ChatX3. Basé sur PSR-12, qui correspond au
+        style réel de GLPI 11 (indentation 4 espaces, accolade des fonctions sur
+        la ligne suivante). Le paquet historique glpi-project/coding-standard est
+        abandonné et impose un style obsolète (indentation 3, accolade K and R) ;
+        on suit donc PSR-12, aligné avec le core GLPI 11.
+    </description>
+
+    <arg name="extensions" value="php"/>
+    <arg name="colors"/>
+    <arg value="sp"/>
+
+    <file>.</file>
+
+    <rule ref="PSR12"/>
+
+    <!-- Les longues chaînes de traduction (msgid) ne peuvent pas être coupées
+         sans casser l'i18n : on tolère les lignes longues (avertissement seul). -->
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="160"/>
+            <property name="absoluteLineLimit" value="0"/>
+        </properties>
+    </rule>
+</ruleset>
