@@ -1,0 +1,120 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: chatx3\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "A key is already stored. Leave blank to keep it unchanged."
+msgstr "Une clé est déjà enregistrée. Laissez vide pour la conserver."
+
+msgid "API connection"
+msgstr "Connexion à l'API"
+
+msgid "API endpoint URL"
+msgstr "URL de l'endpoint de l'API"
+
+msgid "API key"
+msgstr "Clé API"
+
+msgid "Add a category"
+msgstr "Ajouter une catégorie"
+
+msgid "Automatic qualification — ChatX3"
+msgstr "Qualification automatique — ChatX3"
+
+msgid "Automatically qualify new tickets"
+msgstr "Qualifier automatiquement les nouveaux tickets"
+
+msgid "Behaviour"
+msgstr "Comportement"
+
+msgid "Category removed."
+msgstr "Catégorie supprimée."
+
+msgid "Category saved."
+msgstr "Catégorie enregistrée."
+
+msgid "Category"
+msgstr "Catégorie"
+
+msgid "ChatX3 configuration"
+msgstr "Configuration ChatX3"
+
+msgid "ChatX3"
+msgstr "ChatX3"
+
+msgid "Configuration saved."
+msgstr "Configuration enregistrée."
+
+msgid "Configured"
+msgstr "Configurée"
+
+msgid "Default system prompt (optional)"
+msgstr "Prompt système par défaut (optionnel)"
+
+msgid "Define a system prompt per ticket category. It is prepended to the ticket content sent to ChatX3. When \"restrict to categories\" is enabled, only the categories listed below are qualified."
+msgstr "Définissez un prompt système par catégorie de ticket. Il est placé en tête du contenu du ticket envoyé à ChatX3. Quand « restreindre aux catégories » est activé, seules les catégories listées ci-dessous sont qualifiées."
+
+msgid "GLPI user ID that authors the internal note. Leave 0 to post as system."
+msgstr "ID de l'utilisateur GLPI auteur de la note interne. Laissez 0 pour publier en tant que système."
+
+msgid "Invalid response from ChatX3."
+msgstr "Réponse invalide de ChatX3."
+
+msgid "No ChatX3 API key configured."
+msgstr "Aucune clé API ChatX3 configurée."
+
+msgid "No category configured yet."
+msgstr "Aucune catégorie configurée pour l'instant."
+
+msgid "No key configured yet. Sent in the x-api-key header."
+msgstr "Aucune clé configurée pour l'instant. Envoyée dans l'en-tête x-api-key."
+
+msgid "Not configured"
+msgstr "Non configurée"
+
+msgid "Per-category prompts"
+msgstr "Prompts par catégorie"
+
+msgid "Posting user ID (optional)"
+msgstr "ID de l'utilisateur posteur (optionnel)"
+
+msgid "Prepended to the ticket content for categories that do not define their own prompt."
+msgstr "Ajouté en tête du contenu du ticket pour les catégories qui n'ont pas leur propre prompt."
+
+msgid "Process the ChatX3 ticket qualification queue"
+msgstr "Traiter la file de qualification des tickets ChatX3"
+
+msgid "Request timeout (seconds)"
+msgstr "Délai d'expiration des requêtes (secondes)"
+
+msgid "Restrict qualification to selected categories"
+msgstr "Restreindre la qualification aux catégories sélectionnées"
+
+msgid "System prompt"
+msgstr "Prompt système"
+
+msgid "When on, each new ticket is queued and qualified by ChatX3 (internal private note only in this version)."
+msgstr "Si activé, chaque nouveau ticket est mis en file et qualifié par ChatX3 (note interne privée uniquement dans cette version)."
+
+msgid "When on, only tickets whose category is configured below are qualified. When off, all tickets are processed."
+msgstr "Si activé, seuls les tickets dont la catégorie est configurée ci-dessous sont qualifiés. Si désactivé, tous les tickets sont traités."
+
+msgid "e.g. You are a Sage X3 support expert. Answer concisely…"
+msgstr "ex. : Tu es un expert support Sage X3. Réponds de façon concise…"
+
+msgctxt "button"
+msgid "Save"
+msgstr "Enregistrer"
+
+msgctxt "button"
+msgid "Delete"
+msgstr "Supprimer"
+
+msgid "%d attachment — not analysed by ChatX3 (the API does not handle files yet)"
+msgid_plural "%d attachments — not analysed by ChatX3 (the API does not handle files yet)"
+msgstr[0] "%d pièce jointe — non analysée par ChatX3 (l'API ne gère pas encore les fichiers)"
+msgstr[1] "%d pièces jointes — non analysées par ChatX3 (l'API ne gère pas encore les fichiers)"

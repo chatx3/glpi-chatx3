@@ -1,0 +1,19 @@
+{
+    "name": "chatx3/glpi-chatx3",
+    "description": "Qualification automatique des tickets GLPI via l'assistant ChatX3 (Sage X3).",
+    "type": "glpi-plugin",
+    "license": "GPL-3.0-or-later",
+    "homepage": "https://intellx.chat",
+    "authors": [
+        {
+            "name": "IntellX",
+            "homepage": "https://intellx.chat"
+        }
+    ],
+    "require": {
+        "php": ">=8.2"
+    },
+    "support": {
+        "issues": "https://github.com/chatx3/glpi-chatx3/issues"
+    }
+}

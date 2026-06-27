@@ -1,0 +1,17 @@
+# Secrets et configuration locale
+*.key
+.env
+.env.*
+
+# Logs
+*.log
+
+# Artefacts OS / éditeur
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Dépendances (si vendor local un jour)
+/vendor/
+composer.lock

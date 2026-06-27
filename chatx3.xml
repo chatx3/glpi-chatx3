@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Fiche de description pour le catalogue officiel GLPI (plugins.glpi-project.org).
+  Dépôt public : https://github.com/chatx3/glpi-chatx3
+  Éditeur : IntellX — https://intellx.chat
+-->
+<root>
+   <name>ChatX3</name>
+   <key>chatx3</key>
+   <state>stable</state>
+   <logo>https://raw.githubusercontent.com/chatx3/glpi-chatx3/main/chatx3.png</logo>
+   <description>
+      <short>
+         <en>Automatic ticket qualification with the ChatX3 assistant (Sage X3).</en>
+         <fr>Qualification automatique des tickets via l'assistant ChatX3 (Sage X3).</fr>
+      </short>
+      <long>
+         <en>ChatX3 automatically qualifies GLPI tickets using the ChatX3 assistant, specialised in the Sage X3 ecosystem. On ticket creation, the plugin queues it and a scheduled task calls ChatX3, then adds a private internal note with the analysis for the technician. Filtering per ticket category and per-category system prompts are supported. Powered by IntellX — https://intellx.chat</en>
+         <fr>ChatX3 qualifie automatiquement les tickets GLPI grâce à l'assistant ChatX3, spécialisé dans l'écosystème Sage X3. À la création d'un ticket, le plugin l'enfile et une tâche planifiée appelle ChatX3, puis ajoute une note interne privée avec l'analyse pour le technicien. Filtrage par catégorie de ticket et prompts système par catégorie pris en charge. Propulsé par IntellX — https://intellx.chat</fr>
+      </long>
+   </description>
+   <homepage>https://intellx.chat</homepage>
+   <download>https://github.com/chatx3/glpi-chatx3/releases</download>
+   <issues>https://github.com/chatx3/glpi-chatx3/issues</issues>
+   <readme>https://raw.githubusercontent.com/chatx3/glpi-chatx3/main/README.md</readme>
+   <authors>
+      <author>IntellX</author>
+   </authors>
+   <versions>
+      <version>
+         <num>0.1.0</num>
+         <compatibility>~11.0.0</compatibility>
+         <download_url>https://github.com/chatx3/glpi-chatx3/releases/download/0.1.0/chatx3-0.1.0.tar.gz</download_url>
+      </version>
+   </versions>
+   <langs>
+      <lang>en_GB</lang>
+      <lang>fr_FR</lang>
+   </langs>
+   <license>GPL v3+</license>
+   <tags>
+      <en>
+         <tag>ticket</tag>
+         <tag>helpdesk</tag>
+         <tag>ai</tag>
+         <tag>sage x3</tag>
+         <tag>automation</tag>
+      </en>
+      <fr>
+         <tag>ticket</tag>
+         <tag>assistance</tag>
+         <tag>ia</tag>
+         <tag>sage x3</tag>
+         <tag>automatisation</tag>
+      </fr>
+   </tags>
+   <screenshots>
+      <screenshot>https://raw.githubusercontent.com/chatx3/glpi-chatx3/main/docs/screenshots/config.png</screenshot>
+      <screenshot>https://raw.githubusercontent.com/chatx3/glpi-chatx3/main/docs/screenshots/note.png</screenshot>
+   </screenshots>
+</root>
