@@ -36,8 +36,12 @@ d'installation sont proposées : depuis le **Marketplace** intégré à GLPI, ou
 
 ## 3. Méthode B — Installation par téléchargement direct
 
-1. Téléchargez l'archive **`chatx3-x.y.z.tar.gz`** (page de téléchargement
-   fournie par IntellX).
+1. Téléchargez la dernière archive **`chatx3-x.y.z.tar.gz`** depuis la page des
+   versions :
+   - **Dernière version** : <https://github.com/chatx3/glpi-chatx3/releases/latest>
+   - Toutes les versions : <https://github.com/chatx3/glpi-chatx3/releases>
+
+   (sous **Assets**, fichier `chatx3-x.y.z.tar.gz`).
 2. Décompressez-la. Vous obtenez un dossier nommé exactement **`chatx3`**.
 3. Copiez ce dossier dans le répertoire **`plugins/`** de votre GLPI :
    ```
@@ -118,6 +122,7 @@ ajoutées aux tickets sont conservées.
 ## 8. Support
 
 - Éditeur : **IntellX** — <https://intellx.chat>
-- Documentation et suivi : voir la page du plugin fournie par IntellX.
+- Dépôt & documentation : <https://github.com/chatx3/glpi-chatx3>
+- Signaler un problème : <https://github.com/chatx3/glpi-chatx3/issues>
 
 Licence **GPL v3+**.
