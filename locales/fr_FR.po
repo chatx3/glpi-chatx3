@@ -106,6 +106,12 @@ msgstr "Si activé, seuls les tickets dont la catégorie est configurée ci-dess
 msgid "e.g. You are a Sage X3 support expert. Answer concisely…"
 msgstr "ex. : Tu es un expert support Sage X3. Réponds de façon concise…"
 
+msgid "Processing frequency (minutes)"
+msgstr "Fréquence de traitement (minutes)"
+
+msgid "How often ChatX3 is called to process queued tickets. Updates the scheduled task."
+msgstr "Fréquence à laquelle ChatX3 est appelé pour traiter les tickets en file. Met à jour la tâche planifiée."
+
 msgctxt "button"
 msgid "Save"
 msgstr "Enregistrer"

@@ -7,7 +7,7 @@
  * @link      https://plugins.glpi-project.org
  */
 
-define('PLUGIN_CHATX3_VERSION', '0.1.0');
+define('PLUGIN_CHATX3_VERSION', '0.2.0');
 
 // Bornes de compatibilité GLPI (cf. SPECS §4 : GLPI 11 uniquement).
 define('PLUGIN_CHATX3_MIN_GLPI', '11.0.0');

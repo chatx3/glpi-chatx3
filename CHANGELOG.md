@@ -4,6 +4,13 @@ Toutes les évolutions notables de ce plugin sont consignées ici.
 Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/) et le
 projet adopte le [versionnage sémantique](https://semver.org/lang/fr/).
 
+## [0.2.0] - 2026-07-01
+
+### Ajouté
+- Réglage **« Fréquence de traitement (minutes) »** dans la page de
+  configuration : contrôle la cadence d'appel à ChatX3 et met à jour
+  automatiquement la tâche planifiée à l'enregistrement.
+
 ## [0.1.0] - 2026-06-27
 
 ### Ajouté

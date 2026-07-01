@@ -13,6 +13,7 @@
 namespace GlpiPlugin\Chatx3;
 
 use Config as GlpiConfig;
+use CronTask;
 use GLPIKey;
 use Session;
 
@@ -108,6 +109,36 @@ class Config
     }
 
     /**
+     * Retourne la fréquence de traitement (minutes), lue depuis la tâche
+     * planifiée qui en est la source de vérité. Défaut 5 min si absente.
+     */
+    public static function getPollIntervalMinutes(): int
+    {
+        $cron = new CronTask();
+        if ($cron->getFromDBbyName(Queue::class, 'chatx3')) {
+            return max(1, (int) round(((int) $cron->fields['frequency']) / MINUTE_TIMESTAMP));
+        }
+
+        return 5;
+    }
+
+    /**
+     * Applique la fréquence de traitement (minutes) à la tâche planifiée.
+     */
+    public static function setPollIntervalMinutes(int $minutes): void
+    {
+        $minutes = max(1, min(1440, $minutes));
+
+        $cron = new CronTask();
+        if ($cron->getFromDBbyName(Queue::class, 'chatx3')) {
+            $cron->update([
+                'id'        => $cron->getID(),
+                'frequency' => $minutes * MINUTE_TIMESTAMP,
+            ]);
+        }
+    }
+
+    /**
      * Indique si la qualification automatique est activée.
      */
     public static function isEnabled(): bool
@@ -187,6 +218,11 @@ class Config
         if (!empty($to_set)) {
             GlpiConfig::setConfigurationValues(self::CONTEXT, $to_set);
         }
+
+        // Fréquence de traitement : stockée sur la tâche planifiée elle-même.
+        if (isset($input['poll_interval'])) {
+            self::setPollIntervalMinutes((int) $input['poll_interval']);
+        }
     }
 
     /**
@@ -203,6 +239,7 @@ class Config
         $checked = $enabled ? 'checked' : '';
         $restrict_checked = (string) ($values['restrict_to_categories'] ?? '0') === '1' ? 'checked' : '';
         $sys_prompt = htmlspecialchars((string) ($values['system_prompt'] ?? ''), ENT_QUOTES);
+        $poll_interval = self::getPollIntervalMinutes();
 
         $csrf   = Session::getNewCSRFToken();
         $action = \Plugin::getWebDir('chatx3') . '/front/config.form.php';
@@ -215,6 +252,8 @@ class Config
         $l_timeout     = htmlspecialchars(__('Request timeout (seconds)', 'chatx3'), ENT_QUOTES);
         $l_enabled     = htmlspecialchars(__('Automatically qualify new tickets', 'chatx3'), ENT_QUOTES);
         $l_enabled_h   = htmlspecialchars(__('When on, each new ticket is queued and qualified by ChatX3 (internal private note only in this version).', 'chatx3'), ENT_QUOTES);
+        $l_poll        = htmlspecialchars(__('Processing frequency (minutes)', 'chatx3'), ENT_QUOTES);
+        $l_poll_h      = htmlspecialchars(__('How often ChatX3 is called to process queued tickets. Updates the scheduled task.', 'chatx3'), ENT_QUOTES);
         $l_bot         = htmlspecialchars(__('Posting user ID (optional)', 'chatx3'), ENT_QUOTES);
         $l_bot_h       = htmlspecialchars(__('GLPI user ID that authors the internal note. Leave 0 to post as system.', 'chatx3'), ENT_QUOTES);
         $l_restrict    = htmlspecialchars(__('Restrict qualification to selected categories', 'chatx3'), ENT_QUOTES);
@@ -269,6 +308,13 @@ class Config
                        name="enabled" value="1" {$checked}>
                 <label class="form-check-label" for="chatx3_enabled">{$l_enabled}</label>
                 <div class="form-text">{$l_enabled_h}</div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="chatx3_poll_interval">{$l_poll}</label>
+                <input type="number" class="form-control" id="chatx3_poll_interval"
+                       name="poll_interval" value="{$poll_interval}" min="1" max="1440" style="max-width: 160px;">
+                <div class="form-text">{$l_poll_h}</div>
             </div>
 
             <div class="mb-3">
